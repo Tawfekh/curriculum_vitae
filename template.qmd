@@ -116,7 +116,7 @@ needed to perform statistical analyses;
 and scientists to design and analyze breeding experiments;
 - develop user manuals and technical documentations and training for endusers
 of the applications",
-    "Scientific Researcher", "GA2 Unit/ INRAE of Orleans", "02/2019 - 06/2022","The main objective of was to improve genome-wide based phenotype predictions
+    "Scientific Researcher", "GA2 unit/ INRAE of Orleans", "02/2019 - 06/2022","The main objective of was to improve genome-wide based phenotype predictions
 model in an economically important species (poplar) by integrating contextual
 information from the underlying genetic system inferred from 'omics' data, in
 particular through the inference of gene networks. We wanted to add explanatory
@@ -132,7 +132,7 @@ tomato
 You can also consult one of my scientific publications
 https://doi.org/10.1101/2021.09.07.459279",
     "Research Internship", "Dynadiv unit/ IRD of Montpellier", "03/2018 - 09/2018", " I used a machine learning model to detect selection signals in the genome of an african cereal along its evolutionary history.",
-    "Research Internship", "CIRAD / UMR AGAP unité G2POP", "02/2017 - 03/2017", "I used a regression model to predict the proportion of two wheat varieties using reflectance data measured with a hyperspectral infrared camera and a nearinfrared spectrophotometer."
+    "Research Internship", "AGAP UMR : G2POP unit / CIRAD", "02/2017 - 03/2017", "I used a regression model to predict the proportion of two wheat varieties using reflectance data measured with a hyperspectral infrared camera and a nearinfrared spectrophotometer."
 ) |>
     cvevents(when = "dates", what = "role", where = "institution", descr = "details")
 ```
