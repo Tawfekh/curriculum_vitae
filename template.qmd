@@ -123,11 +123,11 @@ particular through the inference of gene networks. We wanted to add explanatory
 power to our predicting models, without losing the predictive quality required for
 the operational breeding in poplar.
 My Mission :
-- Processing the raw data;
-- Constitution of a state of the art of the existing methodology dedicated to the
+- processing the raw data;
+- constitution of a state of the art of the existing methodology dedicated to the
 inference of gene networks and their use in genomic prediction models;
-- Develop a machine learning pipeline dedicated to the objectives of the project;
-- Application of the pipeline to two complementary biological models, poplar and
+- develop a machine learning pipeline dedicated to the objectives of the project;
+- application of the pipeline to two complementary biological models, poplar and
 tomato
 You can also consult one of my scientific publications
 https://doi.org/10.1101/2021.09.07.459279",
