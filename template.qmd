@@ -2,90 +2,58 @@
 title: Untitled
 format:
   modern2-cv-pdf: default
-author: David Schoch
+author: Abdou Rahmane Wade
 cvfont: raleway #texlive fonts like raleway,fetamont,gillius,comfortaa
 cvcolor: 
   main: B83B5E
   accent: 6A2C70
-jobtitle: Team Lead "Transparent Social Analytics"
+jobtitle: Statistical geneticist & Data Scientist 
 sidebar:
-  image: portrait.jpg
-  bullets:
-    - Konstanz, Germany
-    - german
-    - married
+  image: profile1.png
   sections: 
-    - name: Skills
-      items:
-        - text: R
-          exp: 
-            text: "10+ yrs."
-            num: 1
-        - text: Python
-          exp: 
-            text: "2 yrs."
-            num: 0.2
-        - text: JavaScript
-          exp: 
-            text: "4 yrs."
-            num: 0.4
-        - text: Lua
-          exp: 
-            text: "1 yr."
-            num: 0.1
-        - text: Rmarkdown
-          exp: 
-            text: "6 yrs."
-            num: 0.6
-        - text: Quarto
-          exp: 
-            text: "1 yr."
-            num: 0.1
-        - text: Data Analysis
-          exp: 
-            text: "9 years"
-            num: 0.9
-        - text: Web Scraping
-          exp: 
-            text: "8 yrs."
-            num: 0.8
-        - text: Web Development
-          exp: 
-            text: "8 years"
-            num: 0.8
-    - name: Tools
-      items:
-        - Git
-        - RStudio
-        - VS Code
-        - Terminal 
-    - name: Education
-      items:
-        - text: "Ph.D. Computer Science"
-          inst: "University of Konstanz"
-          time: "09/2012 - 11/2015"
-          details: "Thesis: Positional Approach for Network Centrality"
-        - text: "Businessmathematics (Dipl.)"
-          inst: "Karlsruhe Institute of Technology"
-          time: "10/2006 - 07/2012"
-          details: "Thesis: Modularity Maximization"
     - name: Contact
       items:
         - icon: map-marker
-          text: Konstanz, Germany
+          text: Rodez, France
         - icon: phone
-          text: "+XX XXXX XXXX"
+          text: "+33 758 55 18 41"
         - icon: envelope
-          text: david@schochastics.net
-        - icon: home
-          text: mr.schochastics.net
-          href: https://mr.schochastics.net
-        - icon: github
-          text: schochastics
-          href: https://github.com/schochastics
-        - icon: twitter
-          text: schochastics
-          href: https://twitter.com/schochastics    
+          text: rakhmane.abdou@gmail.com 
+    - name: Skills
+      items:
+        - text: R, Rcpp ...
+          exp: 
+            text: "7+ yrs."
+            num: 0.8
+        - text: Python and Julia
+          exp: 
+            text: "2 yrs."
+            num: 0.5
+        - text: Linux
+          exp: 
+            text: "6 yrs."
+            num: 0.6
+        - text: Genomic prediction
+          exp: 
+            text: "6 years"
+            num: 0.9
+        - text: Data Science
+          exp: 
+            text: "5 years"
+            num: 0.7
+    - name: Education
+      items:
+        - text: "Ph.D. candidate Genomic prediction"
+          inst: "Agroparistech/Paris-Saclay University"
+          time: "2019 - 2022 [not defended]"
+          details: "Thesis: Improve genome-based phenotypic predictions with a systems biology approach"
+        - text: "MSc Quantitative Genetic"
+          inst: "L'institut Agro Montpellier "
+          time: "2016 - 2018"
+          details: "Plant Breeding and Evolution Mediterranean and Tropical Plants"
+    - name: Tools
+      items:
+        - Git, RStudio, VS Code, Bash 
 execute: 
   echo: false
 ---
@@ -96,6 +64,7 @@ cvevents <- function(tbl, when, what, where, descr) {
 
     command_start <- "\\cvevent"
     tbl[[where]] <- gsub("\n", " \\\\newline ", tbl[[where]])
+    tbl[[descr]] <- gsub("\n", " \\\\newline ", tbl[[descr]])
     res <- paste0(
         command_start, "{", tbl[[when]], "}", 
         "{", tbl[[what]], "}",
@@ -120,7 +89,11 @@ cvproj <- function(tbl,what,role,items){
 
 # Summary
 
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+I am a statistical geneticist and data scientist at [RAGT2N](https://www.ragt.fr/). I have 4+ years of broad-based experience in building machine learning models using large datasets of omic data (genomic, proteomic transcriptomic etc).
+
+I am proficient in predictive modeling, data processing, and data mining algorithms, as well as scripting languages, including R, C++, Bash and Python.
+
+$\\$
 
 # Experience
 
@@ -129,39 +102,64 @@ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
 #| output: asis
 tibble::tribble(
     ~role, ~institution, ~dates, ~details,
-    "Team Lead for Transparent Social Analytics", "Department of Computational Social Science\nGESIS - Leibniz Institute for the Social Sciences", "03/2022 - Present", "I am coordinating a project to build an Open Science platform with reusable code and tutorials to analyze digital behaviour data. I am also doing research on Open Science practices and I implement tools to enhance reproducibility and make methods accessible in R",
-    "Presidential Fellow", "Sociology Department\nUniversity of Manchester", "09/2018 - 02/2022",
-    "I did research on Disinformation on Social Media which involved the analysis of large scale and unstructured data sets with R and Bash",
-    "Post Doctoral Researcher", "Chair of Social Networks\nETH Zurich", "11/2017 - 08/2018", "I developed new methods to analyze social networks and I gathered and analyzed large datsets from Social Media APIs",
-    "Post Doctoral Researcher", "Department of Computer \\& Information Science\nUniversity of Konstanz", "10/2015 - 10/2017", "I developed new methods to analyze social networks and scraped, harmonized, and analyzed a large corpus of football data",
-    "Ph.D. Candidate", "Department of Computer \\& Information Science\nUniversity of Konstanz", "11/2012 - 09/2015", "I developed new methods to analyze social networks and implemented these methods in R packages using R and C++"
+    "Statistician / Data Scientist", "RAGT2N / Rodez", "07/2022 - Present", "Develop new methodologies and tools in the context of data-driven and predictive breeding using molecular and environmental data and supporting the breeding programs with statistical analyses and visualization of results.
+My Mission :
+- follow new developments in statistics and machine learning applied to plant
+breeding;
+- manage and analyze large scale data, develop innovative machine learning
+approaches, processes and pipelines;
+- collaborate internally with multi-disciplinary teams to ensure appropriate
+experimental designs, statistical methods and interpretations are implemented;
+- work closely with other team members to determine the analytical tools
+needed to perform statistical analyses;
+- play a key role in the development of applications that enable plant breeders
+and scientists to design and analyze breeding experiments;
+- develop user manuals and technical documentations and training for endusers
+of the applications",
+    "Scientific Researcher", "GA2 Unit/ INRAE of Orleans", "02/2019 - 06/2022","The main objective of was to improve genome-wide based phenotype predictions
+model in an economically important species (poplar) by integrating contextual
+information from the underlying genetic system inferred from 'omics' data, in
+particular through the inference of gene networks. We wanted to add explanatory
+power to our predicting models, without losing the predictive quality required for
+the operational breeding in poplar.
+My Mission :
+- Processing the raw data;
+- Constitution of a state of the art of the existing methodology dedicated to the
+inference of gene networks and their use in genomic prediction models;
+- Develop a machine learning pipeline dedicated to the objectives of the project;
+- Application of the pipeline to two complementary biological models, poplar and
+tomato
+You can also consult one of my scientific publications
+https://doi.org/10.1101/2021.09.07.459279",
+    "Research Internship", "Dynadiv unit/ IRD of Montpellier", "03/2018 - 09/2018", " I used a machine learning model to detect selection signals in the genome of an african cereal along its evolutionary history.",
+    "Research Internship", "CIRAD / UMR AGAP unité G2POP", "02/2017 - 03/2017", "I used a regression model to predict the proportion of two wheat varieties using reflectance data measured with a hyperspectral infrared camera and a nearinfrared spectrophotometer."
 ) |>
     cvevents(when = "dates", what = "role", where = "institution", descr = "details")
 ```
 
-# Projects
+<!-- # Projects -->
 
-See my [github profile](https://github.com/schochastics) for a comprehensive list of open source projects.
+<!-- See my [github profile](https://github.com/schochastics) for a comprehensive list of open source projects. -->
 
-```{r}
-#| label: proj
-#| output: asis
-tibble::tribble(
-    ~what, ~role, ~items,
-    "R packages", "Creator and Maintainer", c("edgebundle", "graphlayouts", "levelnet", "netrankr", "netUtils", "networkdata", "PSAWR", "roughnet", "roughsf", "rtoot", "Rtumblr", "signnet", "snahelper", "webbotparseR", "webtrackR"),
-    "R packages", "Contributor", c("backbone", "ggraph", "multigraphr", "netropy", "rang", "rgraph6"),
-    "Quarto extensions", "Creator and Maintainer",
-    c("Academicons (shortcodes)", "Blackboard (revealjs theme)", "sketchy (html theme)", "share buttons (filter)", "nutshell (filter)", "quartocities (website template)", "quartocv (cv templates)"),
-    "soccerverse.com (football analytics website)", "Creator and Maintainer",
-    c(
-        "Manual and automated gathering of football results around the world",
-        "Harmonizing data (e.g. club names and managers)",
-        "Implementation of ranking algorithms",
-        "Predicting of league tables and matchforecasting",
-        "Uses R, JavaScript, HTML, and CSS",
-        "around 1000 visitors/month"
-    )
-) |>
-    cvproj(what = "what", role = "role", items = "items")
+<!-- ```{r} -->
+<!-- #| label: proj -->
+<!-- #| output: asis -->
+<!-- tibble::tribble( -->
+<!--     ~what, ~role, ~items, -->
+<!--     "R packages", "Creator and Maintainer", c("edgebundle", "graphlayouts", "levelnet", "netrankr", "netUtils", "networkdata", "PSAWR", "roughnet", "roughsf", "rtoot", "Rtumblr", "signnet", "snahelper", "webbotparseR", "webtrackR"), -->
+<!--     "R packages", "Contributor", c("backbone", "ggraph", "multigraphr", "netropy", "rang", "rgraph6"), -->
+<!--     "Quarto extensions", "Creator and Maintainer", -->
+<!--     c("Academicons (shortcodes)", "Blackboard (revealjs theme)", "sketchy (html theme)", "share buttons (filter)", "nutshell (filter)", "quartocities (website template)", "quartocv (cv templates)"), -->
+<!--     "soccerverse.com (football analytics website)", "Creator and Maintainer", -->
+<!--     c( -->
+<!--         "Manual and automated gathering of football results around the world", -->
+<!--         "Harmonizing data (e.g. club names and managers)", -->
+<!--         "Implementation of ranking algorithms", -->
+<!--         "Predicting of league tables and matchforecasting", -->
+<!--         "Uses R, JavaScript, HTML, and CSS", -->
+<!--         "around 1000 visitors/month" -->
+<!--     ) -->
+<!-- ) |> -->
+<!--     cvproj(what = "what", role = "role", items = "items") -->
 
-```
+<!-- ``` -->

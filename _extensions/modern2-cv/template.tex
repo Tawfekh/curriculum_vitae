@@ -283,7 +283,7 @@ $endif$
 % param 1: section title
 \newlength{\barw}
 \newcommand{\cvsection}[1] {
-	\vspace{14pt}
+	\vspace{7pt}
 	\settowidth{\barw}{\textbf{\LARGE #1}}
 	\cvtext{
 		\textbf{\LARGE{\textcolor{darkcol}{#1}}}\\[-4pt]
@@ -292,7 +292,7 @@ $endif$
 }
 
 \newcommand{\cvsubsection}[1] {
-	\vspace{14pt}
+	\vspace{7pt}
 	\settowidth{\barw}{\textbf{\Large #1}}
 	\cvtext{
 		\textbf{\Large{\textcolor{darkcol}{#1}}}\\[-4pt]
@@ -301,7 +301,7 @@ $endif$
 }
 
 \newcommand{\cvheadline}[1] {
-	\vspace{16pt}
+	\vspace{7pt}
 	\cvtext{
 		\textbf{\Huge{\textcolor{accentcol}{#1}}}\\[-4pt]
 		 
@@ -309,7 +309,7 @@ $endif$
 }
 
 \newcommand{\cvsubheadline}[1] {
-	\vspace{16pt}
+	\vspace{7pt}
 	\cvtext{
 		\textbf{\huge{\textcolor{darkcol}{#1}}}\\[-4pt]
 		 
@@ -328,7 +328,7 @@ $endif$
  		\textcolor{black}{\textbf{#1}} & \textcolor{maincol}{#2}\\
 	\end{tabular*}%
 	
-	\hspace{4pt}
+	\hspace{2pt}
 	\begin{tikzpicture}[scale=1,rounded corners=2pt,very thin]
 		\fill [lightcol] (0,0) rectangle (1\mpwidth, 0.15);
 		\fill [accentcol] (0,0) rectangle (#3\mpwidth, 0.15);
@@ -365,7 +365,7 @@ $endif$
 			\cvtext{#4}\\
 		}
 	}
-	\vspace{14pt}
+	\vspace{7pt}
 }
 
 \newcommand{\cvproj}[3] {
@@ -379,7 +379,7 @@ $endif$
 			\cvtext{#3}\\
 		}
 	}
-	\vspace{14pt}
+	\vspace{7pt}
 }
 
 %----------------------------------------------------------------------------------------
@@ -402,7 +402,7 @@ $endif$
 		\cvtext{{ \textcolor{maincol} {#3} }}\\
 	}
 
-	\cvtext{#4}\\[14pt]
+	\cvtext{#4}\\[7pt]
 }
 
 %---------------------------------------------------------------------------------------
@@ -480,9 +480,9 @@ $endif$
 		%---------------------------------------------------------------------------------------
 		%	META IMAGE
 		%----------------------------------------------------------------------------------------
-		\includegraphics[width=\linewidth]{$sidebar.image$}
+		\includegraphics[width=.7\linewidth]{$sidebar.image$}\\[3pt]
 		\fcolorbox{white}{white}{\begin{minipage}[c][1.5cm][c]{1\mpwidth}
-				\LARGE{\textbf{\textcolor{maincol}{$author$}}} \\[2pt]
+				\Large{\textbf{\textcolor{maincol}{$author$}}} \\[3pt]
 				\normalsize{ \textcolor{maincol} {$jobtitle$} }
 			\end{minipage}}
 
@@ -490,7 +490,7 @@ $endif$
 		%	META SKILLS
 		%----------------------------------------------------------------------------------------
 		$for(sidebar.bullets)$
-		\icontext{caret-right}{12}{$it$}\\[6pt]
+		\icontext{caret-right}{12}{$it$}\\[2pt]
 		$endfor$
 
 		$for(sidebar.sections)$
@@ -499,15 +499,15 @@ $endif$
 
 		$for(sidebar.sections.items)$
 		$if(sidebar.sections.items.exp)$
-		\cvskill{$sidebar.sections.items.text$}{$sidebar.sections.items.exp.text$}{$sidebar.sections.items.exp.num$} \\[10pt]
+		\cvskill{$sidebar.sections.items.text$}{$sidebar.sections.items.exp.text$}{$sidebar.sections.items.exp.num$} \\[3pt]
 		$elseif(sidebar.sections.items.inst)$
 		\cvmetaevent{$sidebar.sections.items.time$}{$sidebar.sections.items.text$}{$sidebar.sections.items.inst$}{$sidebar.sections.items.details$}
 		$elseif(sidebar.sections.items.href)$
-		\iconhref{$sidebar.sections.items.icon$}{16}{$sidebar.sections.items.text$}{$sidebar.sections.items.href$}\\[6pt]
+		\iconhref{$sidebar.sections.items.icon$}{16}{$sidebar.sections.items.text$}{$sidebar.sections.items.href$}\\[2pt]
 		$elseif(sidebar.sections.items.icon)$
-		\icontext{$sidebar.sections.items.icon$}{16}{$sidebar.sections.items.text$}\\[6pt]
+		\icontext{$sidebar.sections.items.icon$}{16}{$sidebar.sections.items.text$}\\[2pt]
 		$else$
-		\icontext{caret-right}{12}{$it$}\\[6pt]
+		\icontext{caret-right}{12}{$it$}\\[2pt]
 		$endif$
 		$endfor$
 		$endfor$

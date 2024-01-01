@@ -1,18 +1,6 @@
-# modern2-cv Format
+# My CV
 
-A template to create a cv/resume with Quarto.  
-(This template was adopted from this [modern Latex CV](https://github.com/philipempl/modern-latex-cv))
+Please find my curriculum vitae [here](https://github.com/Tawfekh/curriculum_vitae/blob/main/template.pdf). 
 
-![](modern2-cv.png)
+The CV is build using the `modern2-cv` template see [here](https://github.com/schochastics/modern2-cv)
 
-## Installing
-
-```bash
-quarto use template schochastics/modern2-cv
-```
-
-This will install the extension and create an example qmd file that you can use as a starting place for your cv.
-
-## Format Options
-
-see the template for all possible format options
