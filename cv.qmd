@@ -19,6 +19,8 @@ sidebar:
           text: "+33 758 55 18 41"
         - icon: envelope
           text: rakhmane.abdou@gmail.com 
+        - icon: github
+          text: https://github.com/Tawfekh
     - name: Skills
       items:
         - text: R, Rcpp, R Shiny ...
@@ -51,9 +53,6 @@ sidebar:
           inst: "L'institut Agro Montpellier "
           time: "2016 - 2018"
           details: "Plant Breeding and Evolution Mediterranean and Tropical Plants"
-    - name: Tools
-      items:
-        - Git, RStudio, VS Code, Bash 
 execute: 
   echo: false
 ---
