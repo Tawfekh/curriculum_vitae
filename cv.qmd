@@ -21,18 +21,18 @@ sidebar:
           text: rakhmane.abdou@gmail.com 
     - name: Skills
       items:
-        - text: R, Rcpp ...
+        - text: R, Rcpp, R Shiny ...
           exp: 
             text: "7+ yrs."
-            num: 0.8
+            num: 0.85
         - text: Python and Julia
           exp: 
-            text: "2 yrs."
+            text: "4+ yrs."
             num: 0.5
         - text: Linux
           exp: 
             text: "6 yrs."
-            num: 0.6
+            num: 0.65
         - text: Genomic prediction
           exp: 
             text: "6 years"
@@ -40,7 +40,7 @@ sidebar:
         - text: Data Science
           exp: 
             text: "5 years"
-            num: 0.7
+            num: 0.75
     - name: Education
       items:
         - text: "Ph.D. candidate Genomic prediction"
