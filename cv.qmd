@@ -21,6 +21,8 @@ sidebar:
           text: rakhmane.abdou@gmail.com 
         - icon: github
           text: https://github.com/Tawfekh
+        - icon: blog
+          text: https://tawfekh.github.io/portfolio
     - name: Skills
       items:
         - text: R, Rcpp, R Shiny ...
@@ -141,24 +143,43 @@ https://doi.org/10.1101/2021.09.07.459279",
 <!-- See my [github profile](https://github.com/schochastics) for a comprehensive list of open source projects. -->
 
 <!-- ```{r} -->
+
 <!-- #| label: proj -->
+
 <!-- #| output: asis -->
+
 <!-- tibble::tribble( -->
+
 <!--     ~what, ~role, ~items, -->
+
 <!--     "R packages", "Creator and Maintainer", c("edgebundle", "graphlayouts", "levelnet", "netrankr", "netUtils", "networkdata", "PSAWR", "roughnet", "roughsf", "rtoot", "Rtumblr", "signnet", "snahelper", "webbotparseR", "webtrackR"), -->
+
 <!--     "R packages", "Contributor", c("backbone", "ggraph", "multigraphr", "netropy", "rang", "rgraph6"), -->
+
 <!--     "Quarto extensions", "Creator and Maintainer", -->
+
 <!--     c("Academicons (shortcodes)", "Blackboard (revealjs theme)", "sketchy (html theme)", "share buttons (filter)", "nutshell (filter)", "quartocities (website template)", "quartocv (cv templates)"), -->
+
 <!--     "soccerverse.com (football analytics website)", "Creator and Maintainer", -->
+
 <!--     c( -->
+
 <!--         "Manual and automated gathering of football results around the world", -->
+
 <!--         "Harmonizing data (e.g. club names and managers)", -->
+
 <!--         "Implementation of ranking algorithms", -->
+
 <!--         "Predicting of league tables and matchforecasting", -->
+
 <!--         "Uses R, JavaScript, HTML, and CSS", -->
+
 <!--         "around 1000 visitors/month" -->
+
 <!--     ) -->
+
 <!-- ) |> -->
+
 <!--     cvproj(what = "what", role = "role", items = "items") -->
 
 <!-- ``` -->

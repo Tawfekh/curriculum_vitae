@@ -58,7 +58,7 @@
 %----------------------------------------------------------------------------------------
 
 % some tex-live fonts - choose your own
-\usepackage[default]{$cvfont$}
+\usepackage[default]{raleway}
 
 % set font default
 \renewcommand*\familydefault{\sfdefault} 	
@@ -170,47 +170,7 @@
 %----------------------------------------------------------------------------------------
 %	Bibliography
 %---------------------------------------------------------------------------------------- 
-$if(csl-refs)$
-\newlength{\cslhangindent}
-\setlength{\cslhangindent}{1.5em}
-\newlength{\csllabelwidth}
-\setlength{\csllabelwidth}{3em}
-\newlength{\cslentryspacingunit} % times entry-spacing
-\setlength{\cslentryspacingunit}{\parskip}
-\newenvironment{CSLReferences}[2] % #1 hanging-ident, #2 entry spacing
- {% don't indent paragraphs
-  \setlength{\parindent}{0pt}
-  % turn on hanging indent if param 1 is 1
-  \ifodd #1
-  \let\oldpar\par
-  \def\par{\hangindent=\cslhangindent\oldpar}
-  \fi
-  % set entry spacing
-  \setlength{\parskip}{#2\cslentryspacingunit}
- }%
- {}
-\usepackage{calc}
-\newcommand{\CSLBlock}[1]{#1\hfill\break}
-\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{#1}}
-\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{#1}\break}
-\newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
-$endif$
 
-$if(biblio-config)$
-$if(natbib)$
-\usepackage[$natbiboptions$]{natbib}
-\bibliographystyle{$if(biblio-style)$$biblio-style$$else$plainnat$endif$}
-$endif$
-$if(biblatex)$
-\usepackage[$if(biblio-style)$style=$biblio-style$,$endif$$for(biblatexoptions)$$biblatexoptions$$sep$,$endfor$]{biblatex}
-$for(bibliography)$
-\addbibresource{$bibliography$}
-$endfor$
-$endif$
-$endif$
-$if(nocite-ids)$
-\nocite{$for(nocite-ids)$$it$$sep$, $endfor$}
-$endif$
 %----------------------------------------------------------------------------------------
 %	Color DEFINITIONS
 %---------------------------------------------------------------------------------------- 
@@ -218,7 +178,7 @@ $endif$
 \usepackage{color}
 
 % primary color
-\definecolor{maincol}{HTML}{$cvcolor.main$}
+\definecolor{maincol}{HTML}{B83B5E}
 
 % accent color, secondary
 % \definecolor{accentcol}{RGB}{ 250, 150, 10 }
@@ -229,7 +189,7 @@ $endif$
 % light color
 \definecolor{lightcol}{RGB}{245,245,245}
 
-\definecolor{accentcol}{HTML}{$cvcolor.accent$}
+\definecolor{accentcol}{HTML}{6A2C70}
 
 
 
@@ -480,44 +440,72 @@ $endif$
 		%---------------------------------------------------------------------------------------
 		%	META IMAGE
 		%----------------------------------------------------------------------------------------
-		\includegraphics[width=.7\linewidth]{$sidebar.image$}\\[3pt]
+		\includegraphics[width=.7\linewidth]{profile1.png}\\[3pt]
 		\fcolorbox{white}{white}{\begin{minipage}[c][1.5cm][c]{1\mpwidth}
-				\Large{\textbf{\textcolor{maincol}{$author$}}} \\[3pt]
-				\normalsize{ \textcolor{maincol} {$jobtitle$} }
+				\Large{\textbf{\textcolor{maincol}{Abdou Rahmane Wade}}} \\[3pt]
+				\normalsize{ \textcolor{maincol} {Statistical geneticist \& Data
+Scientist} }
 			\end{minipage}}
 
 		%---------------------------------------------------------------------------------------
 		%	META SKILLS
 		%----------------------------------------------------------------------------------------
-		$for(sidebar.bullets)$
-		\icontext{caret-right}{12}{$it$}\\[2pt]
-		$endfor$
+		
+		
+		\cvsection{Contact}
 
-		$for(sidebar.sections)$
+						\icontext{map-marker}{16}{Rodez, France}\\[2pt]
+								\icontext{phone}{16}{+33 758 55 18 41}\\[2pt]
+								\icontext{envelope}{16}{rakhmane.abdou@gmail.com}\\[2pt]
+								\icontext{github}{16}{https://github.com/Tawfekh}\\[2pt]
+								\icontext{blog}{16}{\href{https://tawfekh.github.io/portfolio}{click-here-to-access-my-porfolio}}\\[2pt]
+						
+		\cvsection{Skills}
 
-		\cvsection{$sidebar.sections.name$}
+						\cvskill{R, Rcpp, R Shiny \ldots{}}{7+ yrs.}{0.85} \\[3pt]
+								\cvskill{Python and Julia}{4+ yrs.}{0.5} \\[3pt]
+								\cvskill{Linux}{6 yrs.}{0.65} \\[3pt]
+								\cvskill{Genomic prediction}{6 years}{0.9} \\[3pt]
+								\cvskill{Data Science}{5 years}{0.75} \\[3pt]
+						
+		\cvsection{Education}
 
-		$for(sidebar.sections.items)$
-		$if(sidebar.sections.items.exp)$
-		\cvskill{$sidebar.sections.items.text$}{$sidebar.sections.items.exp.text$}{$sidebar.sections.items.exp.num$} \\[3pt]
-		$elseif(sidebar.sections.items.inst)$
-		\cvmetaevent{$sidebar.sections.items.time$}{$sidebar.sections.items.text$}{$sidebar.sections.items.inst$}{$sidebar.sections.items.details$}
-		$elseif(sidebar.sections.items.href)$
-		\iconhref{$sidebar.sections.items.icon$}{16}{$sidebar.sections.items.text$}{$sidebar.sections.items.href$}\\[2pt]
-		$elseif(sidebar.sections.items.icon)$
-		\icontext{$sidebar.sections.items.icon$}{16}{$sidebar.sections.items.text$}\\[2pt]
-		$else$
-		\icontext{caret-right}{12}{$it$}\\[2pt]
-		$endif$
-		$endfor$
-		$endfor$
-
+						\cvmetaevent{2019 - 2022 {[}not defended{]}}{Ph.D.~candidate Genomic
+prediction}{Agroparistech/Paris-Saclay University}{Thesis: Improve
+genome-based phenotypic predictions with a systems biology approach}
+								\cvmetaevent{2016 - 2018}{MSc Quantitative Genetic}{L'institut Agro
+Montpellier}{Plant Breeding and Evolution Mediterranean and Tropical
+Plants}
+						
 	\end{leftcolumn}
 
 	\begin{rightcolumn}
-		$body$
-		$biblio.tex()$
-	\end{rightcolumn}
+		\cvsection{Summary} \vspace{4pt}
+
+\cvtext{%
+I am a statistical geneticist and data scientist at
+\href{https://www.ragt.fr/}{RAGT2N}. I have 4+ years of broad-based
+experience in building machine learning models using large datasets of
+omic data (genomic, proteomic transcriptomic etc).}
+
+\cvtext{%
+I am proficient in predictive modeling, data processing, and data mining
+algorithms, as well as scripting languages, including R, C++, Bash and
+Python.}
+
+\cvtext{%
+\(\\\)}
+
+\cvsection{Experience} \vspace{4pt}
+
+\cvevent{07/2022 - Present}{Statistician / Data Scientist}{RAGT2N / Rodez}{Develop new methodologies and tools in the context of data-driven and predictive breeding using molecular and environmental data and supporting the breeding programs with statistical analyses and visualization of results. \newline My Mission : \newline - follow new developments in statistics and machine learning applied to plant \newline breeding; \newline - manage and analyze large scale data, develop innovative machine learning \newline approaches, processes and pipelines; \newline - collaborate internally with multi-disciplinary teams to ensure appropriate \newline experimental designs, statistical methods and interpretations are implemented; \newline - work closely with other team members to determine the analytical tools \newline needed to perform statistical analyses; \newline - play a key role in the development of applications that enable plant breeders \newline and scientists to design and analyze breeding experiments; \newline - develop user manuals and technical documentations and training for endusers \newline of the applications}
+
+\cvevent{02/2019 - 06/2022}{Scientific Researcher}{GA2 unit/ INRAE of Orleans}{The main objective was to improve genome-wide based phenotype predictions \newline model in an economically important species (poplar) by integrating contextual \newline information from the underlying genetic system inferred from 'omics' data, in \newline particular through the inference of gene networks. We wanted to add explanatory \newline power to our predicting models, without losing the predictive quality required for \newline the operational breeding in poplar. \newline My Mission : \newline - processing the raw data; \newline - constitution of a state of the art of the existing methodology dedicated to the \newline inference of gene networks and their use in genomic prediction models; \newline - develop a machine learning pipeline dedicated to the objectives of the project; \newline - application of the pipeline to two complementary biological models, poplar and \newline tomato \newline You can also consult one of my scientific publications \newline https://doi.org/10.1101/2021.09.07.459279}
+
+\cvevent{03/2018 - 09/2018}{Research Internship}{Dynadiv unit/ IRD of Montpellier}{ I used a machine learning model to detect selection signals in the genome of an african cereal along its evolutionary history.}
+
+\cvevent{02/2017 - 03/2017}{Research Internship}{AGAP UMR : G2POP unit / CIRAD}{I used a regression model to predict the proportion of two wheat varieties using reflectance data measured with a hyperspectral infrared camera and a nearinfrared spectrophotometer.}
+			\end{rightcolumn}
 \end{paracol}
 
 
